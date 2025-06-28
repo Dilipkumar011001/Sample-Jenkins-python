@@ -9,21 +9,28 @@
     <version>1.0.0</version>
     <packaging>jar</packaging>
 
-           <maven.compiler.source>11</maven.compiler.source>
+   properties>
+        <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
 
     <dependencies>
-        <!-- Add your dependencies here -->
+        <!-- SonarQube Scanner support -->
+        <dependency>
+            <groupId>org.sonarsource.scanner.maven</groupId>
+            <artifactId>sonar-maven-plugin</artifactId>
+            <version>3.9.1.2184</version>
+        </dependency>
     </dependencies>
 
     <build>
         <plugins>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
+               .maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.11.0</version>
-               source>11</source>
+                <configuration>
+                    <source>11</source>
                     <target>11</target>
                 </configuration>
             </plugin>
