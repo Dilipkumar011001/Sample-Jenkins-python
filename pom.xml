@@ -17,24 +17,20 @@
     <dependencies>
         <dependency>
             <groupId>org.sonarsource.scanner.maven</groupId>
-            <artifactId>sonar-maven-plugin</artifactId>
+           Id>
             <version>3.9.1.2184</version>
         </dependency>
     </dependencies>
 
     <build>
         <plugins>
-            <!-- Compiler Plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.11.0</version>
                 <configuration>
                     <source>11</source>
-                    <target>11</target>
-                </configuration>
-                       <!-- Shade Plugin for Uber JAR -->
-            <plugin>
+                   plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
                 <version>3.5.0</version>
@@ -45,7 +41,7 @@
                             <goal>shade</goal>
                         </goals>
                         <configuration>
-                            <finalName>uber</finalName>
+                            <finalName>Uber</finalName>
                             <transformers>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                                     <mainClass>com.example.Main</mainClass>
